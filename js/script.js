@@ -65,7 +65,7 @@ var typed = new Typed(".typing",{
         navList[i].querySelector("a").classList.add("active");
       }
     }
-  }
+  };
 
   document.querySelector(".hire-me").addEventListener("click", function(){
     const sectionIndex = this.getAttribute("data-section-index");
@@ -74,7 +74,16 @@ var typed = new Typed(".typing",{
     updateNav(this);
     removeBackSection();
     addBackSection(sectionIndex);
-  })
+  });
+
+  document.querySelector(".last-works").addEventListener("click", function(){
+    const sectionIndex = this.getAttribute("data-section-index");
+    //console.log(sectionIndex);
+    showSection(this);
+    updateNav(this);
+    removeBackSection();
+    addBackSection(sectionIndex);
+  });
 
   const navTogglerBtn= document.querySelector(".nav-toggler"),
         aside = document.querySelector(".aside");
@@ -87,4 +96,140 @@ var typed = new Typed(".typing",{
           for(let i=0; i<totalSection; i++){
             allSection[i].classList.toggle("open");
           }
-        }
+        };
+
+/*=================================About======================================== */
+/*=========================About - skills__tabs================================= */
+
+const tabs = document.querySelectorAll('[data-target]'),
+tabContent = document.querySelectorAll('[data-content]')
+
+tabs.forEach(tab =>{
+        tab.addEventListener("click", () =>{
+          const target = document.querySelector(tab.dataset.target)
+
+          tabContent.forEach(tabContents =>{
+            tabContents.classList.remove('skills__active')
+          })
+
+          target.classList.add('skills__active')
+          
+          tabs.forEach(tab =>{
+            tab.classList.remove('skills__active')
+          })
+          
+          tab.classList.add('skills__active')
+        })
+      });
+      
+/*=================================Portfolio======================================== */
+/*=========================Portfolio - mixitup-filter-portfolio================================= */
+let mixerPortfolio = mixitup('.work__container', {
+  selectors: {
+      target: '.work__card'
+  },
+  animation: {
+      duration: 300
+  }
+});
+
+const linkWork = document.querySelectorAll('.work__item')
+
+function activeWork(){
+  linkWork.forEach(l => l.classList.remove('active-work'))
+  this.classList.add('active-work')
+}
+
+linkWork.forEach(l => l.addEventListener("click", activeWork))
+
+
+/**=========work Popup========== */
+
+document.addEventListener("click", (e) =>{
+  if(e.target.classList.contains("work__button")){
+    togglePortfolioPopup();
+    portfolioItemDetails(e.target.parentElement);
+  }
+})
+
+function togglePortfolioPopup(){
+  document.querySelector(".portfolio__popup").classList.toggle("open");
+}
+
+document.querySelector(".portfolio__popup-close").addEventListener("click", togglePortfolioPopup)
+
+function portfolioItemDetails(portfolioItem){
+  document.querySelector(".pp__thumbnail  img").src = portfolioItem.querySelector(".work__img").src;
+  document.querySelector(".portfolio__popup-subtitle span").innerHTML = portfolioItem.querySelector(".work__title").innerHTML;
+  document.querySelector(".portfolio__popup-body").innerHTML = portfolioItem.querySelector(".portfolio__item-details").innerHTML;
+}
+
+
+/**===========Services modal============= */
+const modalViews = document.querySelectorAll('.services__modal'),
+      modelBtns = document.querySelectorAll('.services__button'),
+      modalCloses = document.querySelectorAll('.services__modal-close')
+
+let modal = function(modalClick){
+  modalViews[modalClick].classList.add('active-modal')
+}
+
+modelBtns.forEach((modelBtn, i) =>{
+  modelBtn.addEventListener("click", ()=>{
+    modal(i)
+  })
+})
+
+modalCloses.forEach((modalClose)=>{
+  modalClose.addEventListener("click", ()=>{
+    modalViews.forEach((modalView)=>{
+      modalView.classList.remove('active-modal')
+    })
+  })
+})
+
+/**========= Swiper Testimonial========== */
+let swiper = new Swiper(".testimonials__container", {
+  spaceBetween: 24,
+  loop: true,
+  grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    560: {
+      slidesPerView: 1,
+    },
+    800: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+  },
+});
+
+
+
+/*********formulaio********/
+
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_p7cncjz';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Message sent successfully!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+

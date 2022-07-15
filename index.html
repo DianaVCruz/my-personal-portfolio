@@ -5,11 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- ============ CSS SWIPER ============== -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <!-- ============ CSS FILES ============== -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/skins/color-1.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="css/style-switcher.css">
+  <!-- ============ UNICONS ============== -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <!-- ============ BOXICONS ============== -->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
   <!--=========Style Switcher============-->
   <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
@@ -26,7 +32,7 @@
     <!--***======== Aside Start ========== -->
     <div class="aside">
       <div class="logo">
-        <a href="#"><span>D</span>iana<span>C</span>ruz</a>
+        <a href="index.html"><span>D</span>iana<span>C</span>ruz</a>
       </div>
       <div class="nav-toggler">
         <span></span>
@@ -51,15 +57,54 @@
               <h3 class="hello">Hello!, my name is <span class="name">Diana Cruz</span></h3>
               <h3 class="my-profession">I' m a <span class="typing">Web designer</span></h3>
               <p>I'm a frontend developer with experience for over 4 years. My experience is to create and website design, graphinc design, and more...</p>
-              <a href="#" class="btn">Downland CV</a>
+              <a href="#portfolio" data-section-index="0" class="btn last-works">Last works</a>
             </div>
             <div class="home-img">
-              <img src="images/DianaVasquez1.jpg" alt="">
+              <img src="images/home.jpg" alt="">
+            </div>
+            <div class="home-links-socialmedia">
+              <ul class="home-list-socialmedia">
+                <li class="home-list-item">
+                  <a href="https://www.instagram.com/coding_girl503/" target="-blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa-brands fa-instagram"></span>
+                  </a>
+                </li>
+                <li class="home-list-item">
+                  <a href="https://www.facebook.com/profile.php?id=100010128578093" target="-blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa-brands fa-facebook"></span>
+                  </a>
+                </li>
+                <li class="home-list-item">
+                  <a href="https://github.com/DianaVCruz" target="-blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa-brands fa-github"></span>
+                  </a>
+                </li>
+                <li class="home-list-item">
+                  <a href="https://www.linkedin.com/in/diana-cruz-ba0576211/" target="-blank">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fa-brands fa-linkedin"></span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
-      <!--***========Home Section End========-->
 
       <!--***========About Section Start========-->
       <section class="about section" id="about">
@@ -74,7 +119,9 @@
               <div class="row">
                 <div class="about-text paddx-15">
                   <h3>I'm Diana Cruz and <span>Web Developer</span></h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quidem exercitationem optio impedit minima veritatis, labore cum magnam, voluptatibus non provident velit ratione? Rem, temporibus! Suscipit consectetur adipisci veniam laborum neque maiores eius delectus officia eum repudiandae ratione quisquam, sit dignissimos dolores omnis ab dolore tempora perferendis excepturi sapiente impedit voluptatum sed. Quod, soluta ex!</p>
+                  <p>Since 2020 I have experience in the area of web development.</p>
+                  <p>I also collaborate on projects such as Freelance FullStack. I'm more focused on the Frontend, but I also do backend.</p>
+                  <p>I enjoy carrying out the layout and interactivity of web interfaces, as well as optimization, for good positioning and loading performance of web sites and applications. I also have experience in the area of Social Media, Content Marketing and SEO.</p>
                 </div>
               </div>
               <div class="row">
@@ -82,12 +129,6 @@
                   <div class="row">
                     <div class="info-item paddx-15">
                       <p>Birthday : <span>15 Nov</span></p>
-                    </div>
-                    <div class="info-item paddx-15">
-                      <p>Age : <span>20</span></p>
-                    </div>
-                    <div class="info-item paddx-15">
-                      <p>WebSite : <span>www.domain.com</span></p>
                     </div>
                     <div class="info-item paddx-15">
                       <p>Email : <span>dsarai1511@gmail.com</span></p>
@@ -112,125 +153,191 @@
                   </div>
                 </div>
                 <div class="skills paddx-15">
-                  <div class="row">
-                    <div class="skill-item paddx-15">
-                      <h5>CSS</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 76%;"></div>
-                        <div class="skill-percent">76%</div>
+                  <h3 class="title skill">Skills</h3>
+                  <div class="skills__container grid">
+                    <div class="skills__tabs">
+                      <div class="skills__header skills__active" data-target="#frontend">
+                        <!-- <i class="fa-solid fa-code skills__icon"></i> -->
+                        <i class="uil uil-brackets-curly skills__icon"></i>
+                        <div>
+                          <h1 class="skills__title">Frontend Developer</h1>
+                          <span class="skills__subtitle">More than 4 years</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down skills__arrow"></i>
+                      </div>
+                      <div class="skills__header" data-target="#design">
+                        <i class="fa-solid fa-swatchbook skills__icon"></i>
+                        <div>
+                          <h1 class="skills__title">UI / UX Design</h1>
+                          <span class="skills__subtitle">More than 4 years</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down skills__arrow"></i>
+                      </div>
+                      <div class="skills__header" data-target="#backend">
+                        <i class="fa-solid fa-server skills__icon"></i>
+                        <div>
+                          <h1 class="skills__title">Backend developer</h1>
+                          <span class="skills__subtitle">More than 2 years</span>
+                        </div>
+                        <i class="fa-solid fa-angle-down skills__arrow"></i>
                       </div>
                     </div>
-                    <div class="skill-item paddx-15">
-                      <h5>JS</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 86%;"></div>
-                        <div class="skill-percent">86%</div>
+                    <div class="skills__content">
+                      <div class="skills__group skills__active" data-content id="frontend">
+                        <div class="skills__list grid">
+                          <div class="skills__data">
+                            <div class="skills__titles">
+                              <h3 class="skills__name">HTML</h3>
+                              <span class="skills__number">90%</span>
+                            </div>
+                            <div class="skills__bar">
+                              <span class="skills__percentage" style="width:90%;"></span>
+                            </div>
+                          </div>
+                          <div class="skills__data">
+                            <div class="skills__titles">
+                              <h3 class="skills__name">CSS</h3>
+                              <span class="skills__number">95%</span>
+                            </div>
+                            <div class="skills__bar">
+                              <span class="skills__percentage" style="width:95%;"></span>
+                            </div>
+                          </div>
+                          <div class="skills__data">
+                            <div class="skills__titles">
+                              <h3 class="skills__name">JavaScript</h3>
+                              <span class="skills__number">50%</span>
+                            </div>
+                            <div class="skills__bar">
+                              <span class="skills__percentage" style="width:50%;"></span>
+                            </div>
+                          </div>
+                          <div class="skills__data">
+                            <div class="skills__titles">
+                              <h3 class="skills__name">Bootstrap</h3>
+                              <span class="skills__number">100%</span>
+                            </div>
+                            <div class="skills__bar">
+                              <span class="skills__percentage" style="width:100%;"></span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="skill-item paddx-15">
-                      <h5>PHP</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 66%;"></div>
-                        <div class="skill-percent">66%</div>
+                      <div class="skills__group" data-content id="design">
+                        <div class="skills__list grid">
+                          <div class="skills__data">
+                            <div class="skills__titles">
+                              <h3 class="skills__name">Figma</h3>
+                              <span class="skills__number">80%</span>
+                            </div>
+                            <div class="skills__bar">
+                              <span class="skills__percentage" style="width:80%;"></span>
+                            </div>
+                          </div>
+                          <div class="skills__data">
+                            <div class="skills__titles">
+                              <h3 class="skills__name">Sketch</h3>
+                              <span class="skills__number">75%</span>
+                            </div>
+                            <div class="skills__bar">
+                              <span class="skills__percentage" style="width:75%;"></span>
+                            </div>
+                          </div>
+                          <div class="skills__data">
+                            <div class="skills__titles">
+                              <h3 class="skills__name">Photoshop</h3>
+                              <span class="skills__number">80%</span>
+                            </div>
+                            <div class="skills__bar">
+                              <span class="skills__percentage" style="width:80%;"></span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="skill-item paddx-15">
-                      <h5>HTML</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 96%;"></div>
-                        <div class="skill-percent">96%</div>
-                      </div>
-                    </div>
-                    <div class="skill-item paddx-15">
-                      <h5>Bootstrap</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 76%;"></div>
-                        <div class="skill-percent">76%</div>
-                      </div>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="education paddx-15">
-                <h3 class="title">Education</h3>
-                <div class="row">
-                  <div class="timeline-box paddx-15">
-                    <div class="timeline shadow-dark">
-                      <!---------TimeLine- Item------->
-                      <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-date">
-                          <i class="fa fa-calendar"></i>2019 - 2020
-                        </h3>
-                        <h4 class="timeline-title">Computer and Systems Engineering</h4>
-                        <p class="timeline-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi labore natus expedita, tempora laudantium nam! Voluptatibus et neque assumenda libero dolore doloribus facilis deleniti ipsum!</p>
-                      </div>
-                      <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-date">
-                          <i class="fa fa-calendar"></i>2019 - 2020
-                        </h3>
-                        <h4 class="timeline-title">Computer and Systems Engineering</h4>
-                        <p class="timeline-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi labore natus expedita, tempora laudantium nam! Voluptatibus et neque assumenda libero dolore doloribus facilis deleniti ipsum!</p>
-                      </div>
-                      <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-date">
-                          <i class="fa fa-calendar"></i>2019 - 2020
-                        </h3>
-                        <h4 class="timeline-title">Computer and Systems Engineering</h4>
-                        <p class="timeline-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi labore natus expedita, tempora laudantium nam! Voluptatibus et neque assumenda libero dolore doloribus facilis deleniti ipsum!</p>
-                      </div>
-                      <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-date">
-                          <i class="fa fa-calendar"></i>2019 - 2020
-                        </h3>
-                        <h4 class="timeline-title">Computer and Systems Engineering</h4>
-                        <p class="timeline-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi labore natus expedita, tempora laudantium nam! Voluptatibus et neque assumenda libero dolore doloribus facilis deleniti ipsum!</p>
+                      <div class="skills__group" data-content id="backend">
+                        <div class="skills__list grid">
+                          <div class="skills__data">
+                            <div class="skills__titles">
+                              <h3 class="skills__name">PHP</h3>
+                              <span class="skills__number">95%</span>
+                            </div>
+                            <div class="skills__bar">
+                              <span class="skills__percentage" style="width:90%;"></span>
+                            </div>
+                          </div>
+                          <div class="skills__data">
+                            <div class="skills__titles">
+                              <h3 class="skills__name">MySQL</h3>
+                              <span class="skills__number">80%</span>
+                            </div>
+                            <div class="skills__bar">
+                              <span class="skills__percentage" style="width:80%;"></span>
+                            </div>
+                          </div>
+                          <div class="skills__data">
+                            <div class="skills__titles">
+                              <h3 class="skills__name">Firebase</h3>
+                              <span class="skills__number">60%</span>
+                            </div>
+                            <div class="skills__bar">
+                              <span class="skills__percentage" style="width:60%;"></span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="experience paddx-15">
-                <h3 class="title">Experience</h3>
-                <div class="row">
-                  <div class="timeline-box paddx-15">
-                    <div class="timeline shadow-dark">
-                      <!---------TimeLine- Item------->
-                      <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-date">
-                          <i class="fa fa-calendar"></i>2019 - 2020
-                        </h3>
-                        <h4 class="timeline-title">Computer and Systems Engineering</h4>
-                        <p class="timeline-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi labore natus expedita, tempora laudantium nam! Voluptatibus et neque assumenda libero dolore doloribus facilis deleniti ipsum!</p>
+              <div class="row">
+                <div class="education paddx-15">
+                  <h3 class="title">Education</h3>
+                  <div class="row">
+                    <div class="timeline-box paddx-15">
+                      <div class="timeline shadow-dark">
+                        <!---------TimeLine- Item------->
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i>2019 - currently studying
+                          </h3>
+                          <h4 class="timeline-title">Computer and Systems Engineering</h4>
+                          <p class="timeline-text">Since 2019 I started studying and so far, I'm in the 7th cycle at the <strong>Pedagogical University of El Salvador</strong>.</p> 
+                        </div>
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i>2020 (1 year)
+                          </h3>
+                          <h4 class="timeline-title">Advance English Module 1-3</h4>
+                          <p class="timeline-text">At <strong>Capucom</strong> I recieved English clasess financed by <strong>Insaforp</strong>, located in Santa Tecla, La Libertad.</p>
+                        </div>
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i>2019 (1 year)
+                          </h3>
+                          <h4 class="timeline-title">Intermediate English Module 1-3</h4>
+                          <p class="timeline-text">At <strong>Capucom</strong> I recieved English clasess financed by <strong>Insaforp</strong>, located in Santa Tecla, La Libertad.</p>
+                        </div>
                       </div>
-                      <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-date">
-                          <i class="fa fa-calendar"></i>2019 - 2020
-                        </h3>
-                        <h4 class="timeline-title">Computer and Systems Engineering</h4>
-                        <p class="timeline-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi labore natus expedita, tempora laudantium nam! Voluptatibus et neque assumenda libero dolore doloribus facilis deleniti ipsum!</p>
-                      </div>
-                      <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-date">
-                          <i class="fa fa-calendar"></i>2019 - 2020
-                        </h3>
-                        <h4 class="timeline-title">Computer and Systems Engineering</h4>
-                        <p class="timeline-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi labore natus expedita, tempora laudantium nam! Voluptatibus et neque assumenda libero dolore doloribus facilis deleniti ipsum!</p>
-                      </div>
-                      <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-date">
-                          <i class="fa fa-calendar"></i>2019 - 2020
-                        </h3>
-                        <h4 class="timeline-title">Computer and Systems Engineering</h4>
-                        <p class="timeline-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi labore natus expedita, tempora laudantium nam! Voluptatibus et neque assumenda libero dolore doloribus facilis deleniti ipsum!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="experience paddx-15">
+                  <h3 class="title">Experience</h3>
+                  <div class="row">
+                    <div class="timeline-box paddx-15">
+                      <div class="timeline shadow-dark">
+                        <!---------TimeLine- Item------->
+                          <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i>2020 - 2021
+                          </h3>
+                          <h4 class="timeline-title">Appointment Scheduler</h4>
+                          <p class="timeline-text">I worked as an appointment sheduler for people who need to renew or purshase transportation insurance, for the company, "<i>Greater Midwest Transportation Insurance</i>".</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -240,7 +347,6 @@
           </div>
         </div>
       </section>
-      <!--***========About Section End========-->
 
       <!--***========Services Section Start========-->
       <section class="service section" id="services">
@@ -251,76 +357,187 @@
             </div>
           </div>
           <div class="row">
-            <!--=========Service item Start=========-->
-            <div class="service-item paddx-15">
-              <div class="service-item-inner">
-                <div class="icon">
-                  <i class="fa fa-mobile-alt"></i>
+            <div class="service-heading paddx-15">
+              <h2>What I offer</h2>
+            </div>
+          </div>
+          <div class="services__container">
+            <div class="services__content">
+              <div>
+                <i class="uil uil-web-grid services__icon"></i>
+                <h3 class="services__title">Web <br> Designer</h3>
+              </div>
+              <span class="services__button">
+                View More <i class="uil uil-arrow-right services__button-icon"></i>
+              </span>
+              <div class="services__modal">
+                <div class="services__modal-content">
+                  <i class="uil uil-times services__modal-close"></i>
+                  <h3 class="services__modal-title">Web Designer</h3>
+                  <p class="services__modal-description">Services with more than 3 years of experience. Providing quiality work to clients.</p>
+                  <ul class="services__modal-services">
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">I develop the user interface.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">Web page development.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">I create ux element interactions.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">I position your company brand.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">Design and mockups of products for companies.</p>
+                    </li>
+                  </ul>
                 </div>
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi modi corporis?</p>
               </div>
             </div>
-            <!--=========Service item End=========-->
-            <!--=========Service item Start=========-->
-            <div class="service-item paddx-15">
-              <div class="service-item-inner">
-                <div class="icon">
-                  <i class="fa fa-laptop-code"></i>
+            <div class="services__content">
+              <div>
+                <i class="uil uil-arrow services__icon"></i>
+                <h3 class="services__title">UI/UX<br> Designer</h3>
+              </div>
+              <span class="services__button">
+                View More <i class="uil uil-arrow-right services__button-icon"></i>
+              </span>
+              <div class="services__modal">
+                <div class="services__modal-content">
+                  <i class="uil uil-times services__modal-close"></i>
+                  <h3 class="services__modal-title">UI/UX Designer</h3>
+                  <p class="services__modal-description">Services with more than 3 years of experience. Providing quiality work to clients.</p>
+                  <ul class="services__modal-services">
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">I develop the user interface.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">Web page development.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">I create ux element interactions.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">I position your company brand.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">Design and mockups of products for companies.</p>
+                    </li>
+                  </ul>
                 </div>
-                <h4>Web Desing</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi modi corporis?</p>
               </div>
             </div>
-            <!--=========Service item End=========-->
-            <!--=========Service item Start=========-->
-            <div class="service-item paddx-15">
-              <div class="service-item-inner">
-                <div class="icon">
-                  <i class="fa fa-palette"></i>
+            <div class="services__content">
+              <div>
+                <i class="uil uil-edit services__icon"></i>
+                <h3 class="services__title">Branding <br> Designer</h3>
+              </div>
+              <span class="services__button">
+                View More <i class="uil uil-arrow-right services__button-icon"></i>
+              </span>
+              <div class="services__modal">
+                <div class="services__modal-content">
+                  <i class="uil uil-times services__modal-close"></i>
+                  <h3 class="services__modal-title">Branding Designer</h3>
+                  <p class="services__modal-description">Services with more than 3 years of experience. Providing quiality work to clients.</p>
+                  <ul class="services__modal-services">
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">I develop the user interface.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">Web page development.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">I create ux element interactions.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">I position your company brand.</p>
+                    </li>
+                    <li class="services__modal-service">
+                      <i class="uil uil-check-circle services__modal-icon"></i>
+                      <p class="services__modal-info">Design and mockups of products for companies.</p>
+                    </li>
+                  </ul>
                 </div>
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi modi corporis?</p>
               </div>
             </div>
-            <!--=========Service item End=========-->
-            <!--=========Service item Start=========-->
-            <div class="service-item paddx-15">
-              <div class="service-item-inner">
-                <div class="icon">
-                  <i class="fa fa-code"></i>
+          </div>
+          <div class="row">
+            <div class="testimonials-heading paddx-15">
+              <h2>Testimonials</h2>
+            </div>
+          </div>
+          <div class="testimonials__container swiper">
+            <div class="swiper-wrapper">
+              <div class="testimonial__card swiper-slide">
+                <div class="testimonial__quote">
+                  <i class='bx bxs-quote-alt-left'></i>
                 </div>
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi modi corporis?</p>
+                <p class="testimonial__description">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut doloribus minima tenetur ad nobis veniam dolor provident velit ea at.
+                </p>
+                <h3 class="testimonial__date">March 27. 2020</h3>
+                <div class="testimonial__profile">
+                  <img src="images/client1.jpg" alt="" class="testimonial__profile-img">
+              
+                  <div class="testimonial__profile-data">
+                    <span class="testimonial__profile-name">Marta Rivas</span>
+                    <span class="testimonial__profile-detail">Director of a company</span>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial__card swiper-slide">
+                <div class="testimonial__quote">
+                  <i class='bx bxs-quote-alt-left'></i>
+                </div>
+                <p class="testimonial__description">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut doloribus minima tenetur ad nobis veniam dolor provident velit ea at.
+                </p>
+                <h3 class="testimonial__date">March 27. 2020</h3>
+                <div class="testimonial__profile">
+                  <img src="images/client2.jpg" alt="" class="testimonial__profile-img">
+                  <div class="testimonial__profile-data">
+                    <span class="testimonial__profile-name">Marta Rivas</span>
+                    <span class="testimonial__profile-detail">Director of a company</span>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial__card swiper-slide">
+                <div class="testimonial__quote">
+                  <i class='bx bxs-quote-alt-left'></i>
+                </div>
+                <p class="testimonial__description">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut doloribus minima tenetur ad nobis veniam dolor provident velit ea at.
+                </p>
+                <h3 class="testimonial__date">March 27. 2020</h3>
+                <div class="testimonial__profile">
+                  <img src="images/client3.jpg" alt="" class="testimonial__profile-img">
+                  <div class="testimonial__profile-data">
+                    <span class="testimonial__profile-name">Marta Rivas</span>
+                    <span class="testimonial__profile-detail">Director of a company</span>
+                  </div>
+                </div>
               </div>
             </div>
-            <!--=========Service item End=========-->
-            <!--=========Service item Start=========-->
-            <div class="service-item paddx-15">
-              <div class="service-item-inner">
-                <div class="icon">
-                  <i class="fa fa-search"></i>
-                </div>
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi modi corporis?</p>
-              </div>
-            </div>
-            <!--=========Service item End=========-->
-            <!--=========Service item Start=========-->
-            <div class="service-item paddx-15">
-              <div class="service-item-inner">
-                <div class="icon">
-                  <i class="fa fa-bullhorn"></i>
-                </div>
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi modi corporis?</p>
-              </div>
-            </div>
-            <!--=========Service item End=========-->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
-      <!--***========Services Section End========-->
 
       <!--***========Portfolio Section Start========-->
       <section class="portfolio section" id="portfolio">
@@ -335,65 +552,143 @@
               <h2>My last projects :</h2>
             </div>
           </div>
-          <div class="row">
-            <!--Portfolio item start-->
-            <div class="portfolio-item paddx-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/portfolio/portfolio1.jpg" alt="">
+          <div class="work__filters">
+            <span class="work__item active-work" data-filter="all">All</span>
+            <span class="work__item" data-filter=".web">Web</span>
+            <span class="work__item" data-filter=".app">App</span>
+            <span class="work__item" data-filter=".design">Design</span>
+          </div>
+          <div class="work__container">
+            <div class="work__card mix web">
+              <img src="images/work-1.webp" alt="" class="work__img">
+              <h3 class="work__title">Web Design</h3>
+              <span class="work__button">Demo
+                <i class="fa-solid fa-arrow-right work__button-icon"></i>
+              </span>
+              <div class="portfolio__item-details">
+                <h3 class="details__title">The serves provide for design</h3>
+                <p class="details__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur aliquam nesciunt rerum delectus reprehenderit, dolorem odit dolor minima tempora!</p>
+                <ul class="details__info">
+                  <li>Created - <span>4 dec 2020</span></li>
+                  <li>Techologies - <span>html css</span></li>
+                  <li>Role - <span>frontend</span></li>
+                  <li>View - <span><a href="#">www.domain.com</a></span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="work__card mix app">
+              <img src="images/work-2.webp" alt="" class="work__img">
+              <h3 class="work__title">App Design</h3>
+              <span class="work__button">Demo
+                <i class="fa-solid fa-arrow-right work__button-icon"></i>
+              </span>
+              <div class="portfolio__item-details">
+                <h3 class="details__title">Mobile app landing design & app maintain.</h3>
+                <p class="details__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <ul class="details__info">
+                  <li>Created - <span>10 dec 2021</span></li>
+                  <li>Techologies - <span>html css</span></li>
+                  <li>Role - <span>frontend</span></li>
+                  <li>View - <span><a href="#">www.domain.com</a></span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="work__card mix design">
+              <img src="images/work-3.webp" alt="" class="work__img">
+              <h3 class="work__title">Brand Design</h3>
+              <span class="work__button">Demo
+                <i class="fa-solid fa-arrow-right work__button-icon"></i>
+              </span>
+              <div class="portfolio__item-details">
+                <h3 class="details__title">Logo design creativity & Application.</h3>
+                <p class="details__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur aliquam nesciunt rerum delectus reprehenderit... texto aquiii...</p>
+                <ul class="details__info">
+                  <li>Created - <span>12 dec 2019</span></li>
+                  <li>Techologies - <span>html css js</span></li>
+                  <li>Role - <span>frontend</span></li>
+                  <li>View - <span><a href="#">www.domain.com</a></span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="work__card mix app">
+              <img src="images/work-4.webp" alt="" class="work__img">
+              <h3 class="work__title">App Design</h3>
+              <span class="work__button">Demo
+                <i class="fa-solid fa-arrow-right work__button-icon"></i>
+              </span>
+              <div class="portfolio__item-details">
+                <h3 class="details__title">Mobile app landing design & Services.</h3>
+                <p class="details__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur aliquam nesciunt rerum delectus reprehenderit, dolorem odit dolor minima tempora!</p>
+                <ul class="details__info">
+                  <li>Created - <span>4 dec 2020</span></li>
+                  <li>Techologies - <span>html css</span></li>
+                  <li>Role - <span>frontend</span></li>
+                  <li>View - <span><a href="#">www.domain.com</a></span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="work__card mix web">
+              <img src="images/work-6.webp" alt="" class="work__img">
+              <h3 class="work__title">Brand Design</h3>
+              <span class="work__button">Demo
+                <i class="fa-solid fa-arrow-right work__button-icon"></i>
+              </span>
+              <div class="portfolio__item-details">
+                <h3 class="details__title">Design for tecnology & services.</h3>
+                <p class="details__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur aliquam nesciunt rerum delectus reprehenderit, dolorem odit dolor minima tempora!</p>
+                <ul class="details__info">
+                  <li>Created - <span>4 dec 2020</span></li>
+                  <li>Techologies - <span>html css</span></li>
+                  <li>Role - <span>frontend</span></li>
+                  <li>View - <span><a href="#">www.domain.com</a></span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="work__card mix design">
+              <img src="images/work-6.webp" alt="" class="work__img">
+              <h3 class="work__title">Web Design</h3>
+              <span class="work__button">Demo
+                <i class="fa-solid fa-arrow-right work__button-icon"></i>
+              </span>
+              <div class="portfolio__item-details">
+                <h3 class="details__title">App for tecnology & services.</h3>
+                <p class="details__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur aliquam nesciunt rerum delectus reprehenderit, dolorem odit dolor minima tempora!</p>
+                <ul class="details__info">
+                  <li>Created - <span>4 dec 2020</span></li>
+                  <li>Techologies - <span>html css</span></li>
+                  <li>Role - <span>frontend</span></li>
+                  <li>View - <span><a href="#">www.domain.com</a></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--***========Portfolio Popup========-->
+        <div class="portfolio__popup">
+          <div class="portfolio__popup-inner">
+            <div class="portfolio__popup-content">
+              <span class="portfolio__popup-close"><i class="fa-solid fa-xmark"></i></span>
+              <div class="pp__thumbnail">
+                <img src="images/work-2.webp" alt="" class="portfolio__popup-img">
+              </div>
+              <div class="portfolio__popup-info">
+                <div class="portfolio__popup-subtitle">Featured - <span>Design</span></div>
+                <div class="portfolio__popup-body">
+                  <h3 class="details__title">App for tecnology & services.</h3>
+                  <p class="details__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum, tempore?</p>
+                  <ul class="details__info">
+                    <li>Created - <span>4 dec 2020</span></li>
+                    <li>Techologies - <span>html css</span></li>
+                    <li>Role - <span>frontend</span></li>
+                    <li>View - <span><a href="#">www.domain.com</a></span></li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <!--Portfolio item end-->
-            <!--Portfolio item start-->
-            <div class="portfolio-item paddx-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/portfolio/portfolio2.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <!--Portfolio item end-->
-            <!--Portfolio item start-->
-            <div class="portfolio-item paddx-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/portfolio/portfolio3.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <!--Portfolio item end-->
-            <!--Portfolio item start-->
-            <div class="portfolio-item paddx-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/portfolio/portfolio4.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <!--Portfolio item end-->
-            <!--Portfolio item start-->
-            <div class="portfolio-item paddx-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/portfolio/portfolio5.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <!--Portfolio item end-->
-            <!--Portfolio item start-->
-            <div class="portfolio-item paddx-15">
-              <div class="portfolio-item-inner shadow-dark">
-                <div class="portfolio-img">
-                  <img src="images/portfolio/portfolio6.jpg" alt="">
-                </div>
-              </div>
-            </div>
-            <!--Portfolio item end-->
           </div>
         </div>
       </section>
-      <!--***========Portfolio Section End========-->
 
       <!--***========Contact Section Start========-->
       <section class="contact section" id="contact">
@@ -406,81 +701,84 @@
             <h3 class="contact-title paddx-15">Have You Any Questions ?</h3>
             <h4 class="contact-sub-title paddx-15">I'M AT YOUR SERVICES</h4>
             <div class="row">
-              <!--=========Contact info item Start=========-->
-              <div class="contact-info-item paddx-15">
-                <div class="icon"><i class="fa fa-phone"></i></div>
-                <h4>Call Us On</h4>
-                <p>+503 64512514</p>
+              <div class="contact__container">
+                <div class="contact__content">
+                    <div class="contact__card">
+                      <i class="uil uil-envelope-edit contact__card-icon"></i>
+                      <h3 class="contact__card-title">Email</h3>
+                      <span class="contact__data">saravcruz1501@gmail.com</span>
+                      <a href="mailto:saravcruz1501@gmail.com?Subject=Consulta%20por%20un%20proyecto" class="contact__button">
+                        Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+                      </a>
+                    </div>
+                    <div class="contact__card">
+                      <i class="uil uil-whatsapp contact__card-icon"></i>
+                      <h3 class="contact__card-title">Whatsapp</h3>
+                      <span class="contact__data">+503 6451-2514</span>
+                      <a href="https://wa.me/50364512514?text=Hola,%20¿Estás%20disponible%20para%20un%20nuevo%20proyecto?" class="contact__button" target="_blank">
+                        Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+                      </a>
+                    </div>
+                    <div class="contact__card">
+                      <i class="uil uil-facebook-messenger contact__card-icon"></i>
+                      <h3 class="contact__card-title">Messenger</h3>
+                      <span class="contact__data">user.Diana_Cruz</span>
+                      <a href="https://msng.link/o/?DianaCruz=fm" class="contact__button">
+                        Write me <i class="uil uil-arrow-right contact__button-icon"></i>
+                      </a>
+                    </div>
+                </div>
               </div>
-              <!--=========Contact info item End=========-->
-              <!--=========Contact info item Start=========-->
-              <div class="contact-info-item paddx-15">
-                <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
-                <h4>Office</h4>
-                <p>El Salvador</p>
-              </div>
-              <!--=========Contact info item End=========-->
-              <!--=========Contact info item Start=========-->
-              <div class="contact-info-item paddx-15">
-                <div class="icon"><i class="fa fa-envelope"></i></div>
-                <h4>Email</h4>
-                <p>dsarai1511@gmail.com</p>
-              </div>
-              <!--=========Contact info item End=========-->
-              <!--=========Contact info item Start=========-->
-              <div class="contact-info-item paddx-15">
-                <div class="icon"><i class="fa fa-globe-americas"></i></div>
-                <h4>Website</h4>
-                <p>www.domain.com</p>
-              </div>
-              <!--=========Contact info item End=========-->
             </div>
             <h3 class="contact-title paddx-15">SEND ME AN EMAIL</h3>
             <h4 class="contact-sub-title paddx-15">I'M VERY RESPOSIVE TO MESSAGES</h4>
             <!--========Contact Form Start========-->
             <div class="row">
-              <div class="contact-form">
+              <form action="https://formsubmit.co/saravcruz1501@gmail.com" method="POST" id="form" class="contact-form">
                 <div class="row">
                   <div class="form-item col-6 paddx-15">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Name">
+                      <input name="name" type="text" class="form-control" placeholder="Name" id="name" required>
                     </div>
                   </div>
                   <div class="form-item col-6 paddx-15">
                     <div class="form-group">
-                      <input type="email" class="form-control" placeholder="Email">
+                      <input name="email" type="email" class="form-control" placeholder="Email" id="email" required>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="form-item col-12 paddx-15">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Subject">
+                      <input name="subject" type="text" class="form-control" placeholder="Subject" id="subject" required>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="form-item col-12 paddx-15">
                     <div class="form-group">
-                      <textarea name="" class="form-control" id="" placeholder="Message" cols="30" rows="10"></textarea>
+                      <textarea name="message" class="form-control" id="message" placeholder="Message" cols="30" rows="10" required></textarea>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="form-item col-12 paddx-15">
                     <div class="form-group">
-                      <button type="submit" class="btn">Send Message</button>
+                      <input type="submit" class="btn" id="button" value="Send Message"></input>
                     </div>
                   </div>
                 </div>
-              </div>
+              </form>
+              <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+              <script type="text/javascript">
+                emailjs.init('0kCl_q1-1AQFY__Vm')
+              </script>
             </div>
             <!--========Contact Form End========-->
         </div>
       </section>
-      <!--***========Contact Section End========-->
     </div>
-    <!-- ========Main Content End=======-->
+    <!-- ?========Main Content End=======-->
   </div>
   <!-- !====== Main Container End ====== -->
 
@@ -502,9 +800,17 @@
     </div>
   </div>
   <!--============Style Switches End==============-->
-  <!-- ==========  JS FILES =========== -->
+
+  <!-- =========================  JS FILES ====================== -->
+  <!--==============js-mixitup filter===============-->
+  <script src="js/mixitup.min.js"></script>
+  <!--==============js-efect-typing===============-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
-  <script src="js/script.js"></script>
+  <!--==============js-swiper===============-->
+  <script src="js/swiper-bundle.min.js"></script>
+  <!--==============je-style-switcher===============-->
   <script src="js/style-switcher.js"></script>
+  <!--==============js-main===============-->
+  <script src="js/script.js"></script>
 </body>
 </html>
