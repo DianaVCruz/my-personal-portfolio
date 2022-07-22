@@ -228,7 +228,7 @@ button{
 .aside .logo{
   position: absolute;
   top: 50px;
-  font-size: 30px;
+  font-size: 2rem;
   text-transform:capitalize;
 }
 
@@ -236,14 +236,14 @@ button{
   color: var(--text-black-900);
   font-weight: 700;
   padding: 15px 20px;
-  font-size: 30px;
+  font-size: 1.5rem;
   letter-spacing: 5px;
   position: relative;
 }
 
 .aside .logo a span{
   font-family: 'Clicker Script', cursive;
-  font-size: 40px;
+  font-size: 2.2rem;
 }
 
 .aside .logo a::before{
@@ -255,6 +255,11 @@ button{
   border-left: 5px solid var(--skin-color);
   bottom: 0;
   left: 0;
+  transition: .5s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
 }
 .aside .logo a::after{
   content: '';
@@ -265,6 +270,20 @@ button{
   border-right: 5px solid var(--skin-color);
   top: 0;
   right: 0;
+  transition: .5s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+}
+
+.aside .logo:hover a::after{
+  width: 15%;
+  height: 50%;
+}
+.aside .logo:hover a::before{
+  width: 15%;
+  height: 50%;
 }
 
 .aside .nav-toggler{
@@ -635,6 +654,9 @@ h3.my-profession{
   display: flex;
   align-items: center;
   cursor: pointer;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
 }
 
 .skills__header:not(:last-child){
@@ -676,37 +698,54 @@ h3.my-profession{
   display: block;
 }
 
+.skills__group{
+  max-width: 30rem;
+  height: 15rem;
+}
+
 .skills__list{
   display: flex;
-  flex-direction: column;
-  row-gap: 1.8rem;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+  transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -ms-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
 }
 
-.skills__titles{
+.skill__item{
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  margin: 0 1rem 1rem;
 }
 
-.skills__name{
-  font-size: 1.1rem;
-  font-weight: 600;
+.skill__item-icon{
+  font-size: 4rem;
 }
 
-.skills__bar,
-.skills__percentage{
-  height: 6px;
-  border-radius: 0.25rem;
+.skill__item-title{
+  text-align: center;
+  margin-top: .5rem;
 }
 
-.skills__bar{
-  background-color: var(--bg-black-50);
-}
+.html-icon{color: #e34c26;}
+.css-icon{color: #264de4;}
+.sass-icon{color: #cc6699;}
+.js-icon{color: #f0db4f;}
+.boostrap-icon{color: #563d7c;}
+.git-icon{color: #f34f29;}
+.github-icon{color: #424242;}
+.adobe-icon{color:#ff0000;}
+.php-icon{color: #8993be;}
+.csharp-icon{color: #6c009e}
+.oracle-icon{color: #f80000;}
 
-.skills__percentage{
-  display: block;
-  background-color: var(--skin-color);
-}
+
 
 /**-------------------------Skills end----------------------------------- */
 
@@ -1080,7 +1119,7 @@ h3.my-profession{
   background-color: var(--bg-black-100);
   padding: 1rem;
   border-radius: 0.5rem;
-  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
 .portfolio__item-details{
@@ -1369,6 +1408,14 @@ h3.my-profession{
   .skills__container{column-gap: 1.6rem;}
 }
 
+@media (max-width:895px){
+  .skills__group{
+    max-width: 30rem;
+    height: 22rem;
+  }
+}
+
+
 @media (max-width:800px){
   
   /* .about .about-content .skills, */
@@ -1389,6 +1436,8 @@ h3.my-profession{
   .skills__tabs{min-width: 340px;}
   
   .skills__content{min-width: 300px;}
+
+  .skills__group{max-width: 100%;height: 14rem;}
 
   .work__card{flex: 0 0 49% ;max-width: 49%;}
 
@@ -1437,4 +1486,8 @@ h3.my-profession{
   .portfolio__popup-content{grid-template-columns: 1fr;}
 
   .portfolio__popup-inner{width: 500px; padding: 2rem;}
+}
+
+@media screen and (max-width:519px){
+  .skills__group{max-width: 100%;height: auto;}
 }
