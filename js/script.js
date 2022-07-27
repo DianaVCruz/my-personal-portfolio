@@ -1,6 +1,6 @@
 /**=================================Typing animation======================================== */
 var typed = new Typed(".typing",{
-  strings:["","Web Designer","Web Developer","Graphic Designer"],
+  strings:["","Web Designer","Web Developer","UI/UX Designer"],
   typeSpeed:100,
   BackSpeed:60,
   loop:true
@@ -67,15 +67,6 @@ var typed = new Typed(".typing",{
     }
   };
 
-  document.querySelector(".hire-me").addEventListener("click", function(){
-    const sectionIndex = this.getAttribute("data-section-index");
-    //console.log(sectionIndex);
-    showSection(this);
-    updateNav(this);
-    removeBackSection();
-    addBackSection(sectionIndex);
-  });
-
   document.querySelector(".last-works").addEventListener("click", function(){
     const sectionIndex = this.getAttribute("data-section-index");
     //console.log(sectionIndex);
@@ -97,6 +88,38 @@ var typed = new Typed(".typing",{
             allSection[i].classList.toggle("open");
           }
         };
+
+  /*********Changing language********/
+
+  const check = document.querySelector(".check");
+  check.addEventListener("click", idioma);
+
+  const textsToChange = document.querySelectorAll("[data-section]");
+
+  const changeLanguage = async language =>{
+    const requestJson = await fetch(`./languages/${language}.json`);
+    const texts = await requestJson.json();
+
+    for (let textToChange of textsToChange){
+      const section = textToChange.dataset.section;
+      const value = textToChange.dataset.value;
+
+      textToChange.innerHTML = texts[section][value];
+    }
+  };
+
+  function idioma(){
+    let id = check.checked;
+    if(id == true){
+      let language = "es";
+      changeLanguage(language);
+    }
+    else{
+      let language = "en";
+      changeLanguage(language);
+      // location.href="index.html"
+    }
+  }
 
 /*=================================About======================================== */
 /*=========================About - skills__tabs================================= */
@@ -226,10 +249,13 @@ document.getElementById('form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send Email';
-      alert('Message sent successfully!');
+      Swal.fire(
+        'Excelent!',
+        'Message sent successfully!',
+        'success'
+      )
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
     });
 });
-
